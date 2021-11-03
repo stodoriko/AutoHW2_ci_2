@@ -17,7 +17,7 @@ public class ApiPostTest {
                 .post("/post")
         .then()// Проверки
                 .statusCode(200)
-                .body("data", equalTo("Локомотив Чемпион!"))
+                .body("data", equalTo("Спартак Чемпион!"))
         ;
     }
 }
