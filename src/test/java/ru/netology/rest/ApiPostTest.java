@@ -10,11 +10,11 @@ public class ApiPostTest {
     @Test
     void shouldReturnChampionTeam() {
         given()// Предусловия
-                .baseUri("https://localhost:9999/api/v1")
+                .baseUri("https://postman-echo.com")
                 .contentType("text/plain; charset=UTF-8")
                 .body("Локомотив Чемпион!")// Отправляем данные
         .when()// Выполняемые действия относительно baseUri
-                .post("/demo/accounts")
+                .post("/post")
         .then()// Проверки
                 .statusCode(200)
                 .body("data", equalTo("Локомотив Чемпион!"))
